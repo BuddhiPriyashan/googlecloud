@@ -1,0 +1,34 @@
+# https://cloud.google.com/appengine/docs/flexible/reference/app-yaml?tab=php
+
+runtime: php
+#Select the flexible environment
+env: flex
+
+runtime_config:
+  document_root: .
+  operating_system: ubuntu22
+  runtime_version: 8.2
+  # [START error_reporting_setup_php_app_yaml]
+  # [START trace_setup_php_enabling_stackdriver_integration]
+  enable_stackdriver_integration: true
+  # [END trace_setup_php_enabling_stackdriver_integration]
+  # [END error_reporting_setup_php_app_yaml]
+  
+network:
+  name: xxx-dev-spoke-vpc-1
+  instance_ip_mode: internal
+  subnetwork_name: subnet-dev-yyy-ro-website
+
+env_variables:
+  # [START gae_flex_redislabs_memcache_yaml]
+  # Set your memcache endpoint here. This should be in the format "host:port"
+  #MEMCACHE_ENDPOINT: "YOUR_MEMCACHE_ENDPOINT"
+  # If you are using a Memcached server with SASL authentiation enabled,
+  # fill in these values with your username and password.
+  #MEMCACHE_USERNAME: ""
+  #MEMCACHE_PASSWORD: ""
+  # [END gae_flex_redislabs_memcache_yaml]
+
+  # [START gae_flex_storage_yaml]
+  GOOGLE_STORAGE_BUCKET: "website-dev-cloudstorage-bucket"
+  # [END gae_flex_storage_yaml]
