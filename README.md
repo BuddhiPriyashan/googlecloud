@@ -6,3 +6,5 @@ https://cloud.google.com/appengine/docs/flexible/configuration-files
 app.yaml to be added in the same location as the app's source files
 
 #WordPress file structure
+https://learn.wordpress.org/lesson/the-wordpress-file-structure/
+
