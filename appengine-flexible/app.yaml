@@ -19,6 +19,20 @@ network:
   instance_ip_mode: internal
   subnetwork_name: subnet-dev-yyy-ro-website
 
+#enable warmup requests
+inbound_services:
+  - mail    #Allows application to receive mail
+  - warmup  #Enable warmup requests
+
+automatic_scaling:
+  instance_class: f2
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 5
+  min_pending_latency: 30ms
+  max_pending_latency: automatic
+  max_concurrent_requests: 10 #number of concurrent requests an automatic scaling instance can accept before the scheduler spawns a new instance
+                              #To determine the optimal value, gradually increase it and monitor the performance of your application
 env_variables:
   # [START gae_flex_redislabs_memcache_yaml]
   # Set your memcache endpoint here. This should be in the format "host:port"
