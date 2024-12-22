@@ -137,3 +137,8 @@ mysql -u root -p --host 10.115.48.3 --port 3306
 #### Firewall Rules
 ![{FDCACFAB-5DC4-46F0-996D-0AB6D937AA78}](https://github.com/user-attachments/assets/add928f2-ded9-4505-94c6-4713f7a5264f)
 
+![{D389D0A6-E640-441A-98BD-6647BD38DE2A}](https://github.com/user-attachments/assets/f27af36a-5663-4a64-9844-ed645b702961)
+
+![{83C9CC99-2358-4E30-B9BB-FFBAB3CBA7EF}](https://github.com/user-attachments/assets/7bd33c8e-b6bd-4bc2-9dcc-b641c067dcfa)
+
+
