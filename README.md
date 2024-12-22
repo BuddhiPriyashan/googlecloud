@@ -27,3 +27,7 @@ gcloud sql instances create INSTANCE_NAME \
 --enable-bin-log
 
 Method 2 - https://cloud.google.com/sql/docs/mysql/connect-instance-private-ip#create-instance
+
+
+Method 3 - https://cloud.google.com/sql/docs/mysql/connect-instance-private-ip
+Trying this method.
