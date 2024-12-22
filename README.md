@@ -134,4 +134,6 @@ mysql -u root -p --host 10.115.48.3 --port 3306
 24/12/22 10:56:40 couldn't connect to "wordpress-ro-15dec24:us-central1:quickstart-mysql-instance": dial tcp 10.115.48.3:3307: connect: connection timed out
 
 
+#### Firewall Rules
+![{FDCACFAB-5DC4-46F0-996D-0AB6D937AA78}](https://github.com/user-attachments/assets/add928f2-ded9-4505-94c6-4713f7a5264f)
 
