@@ -1,3 +1,6 @@
+#Obs: Set Automatic Restart - ON
+
+
 #!/bin/bash
 # Always a good idea to update things
 apt-get update -y
