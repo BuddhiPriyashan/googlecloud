@@ -11,6 +11,7 @@ https://learn.wordpress.org/lesson/the-wordpress-file-structure/
 #App Engine Flexible Deployment
 
 Step 1: Create Cloud SQL instance with Private Service Connect enabled
+
 Method1 - https://cloud.google.com/sql/docs/mysql/configure-private-service-connect#create-cloud-sql-instance-psc-enabled-2
 
 gcloud sql instances create INSTANCE_NAME \
