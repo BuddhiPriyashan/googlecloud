@@ -72,6 +72,25 @@ gcloud sql instances create INSTANCE_NAME \
 --psc-auto-connections=network=VPC_NETWORK,project=SERVICE_PROJECT \
 --enable-bin-log
 
+step 6: find DNS name of the SQL instance:
+gcloud sql instances describe bdy-sql-wordpress --project=www-wordpress-website | grep dns
+dnsName: 68cacb6bf974.1g9aeq62dt1al.europe-west3.sql.goog.
+
+step 7: create private DNS zone (neend to have enabled DNS api: dns.googleapis.com)
+gcloud dns managed-zones create dns-zone-for-sql \
+--project=www-wordpress-website \
+--description=bdy-dns-zone \
+--dns-name=68cacb6bf974.1g9aeq62dt1al.europe-west3.sql.goog. \
+--networks=default-bdy \
+--visibility=private
+
+step 8: create a DNS record in the zone
+gcloud dns record-sets create 68cacb6bf974.1g9aeq62dt1al.europe-west3.sql.goog. \
+--project=www-wordpress-website \
+--type=A \
+--rrdatas=10.156.1.10 \
+--zone=dns-zone-for-sql
+
 Method 2 - https://cloud.google.com/sql/docs/mysql/connect-instance-private-ip#create-instance
 
 
