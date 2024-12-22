@@ -91,6 +91,30 @@ gcloud dns record-sets create 68cacb6bf974.1g9aeq62dt1al.europe-west3.sql.goog. 
 --rrdatas=10.156.1.10 \
 --zone=dns-zone-for-sql
 
+#Create App engine flexible in the same VPC
+Obs: In order to connect to your Cloud SQL instance over private IP, your App Engine flexible environment deployment must be in the same VPC network as your Cloud SQL instance.
+
+$ sudo apt update
+$ sudo apt install php-zip php-curl
+$ composer install
+
+php wordpress.php setup -n \
+    --dir=./wordpress-project \
+    --db_instance=bdy-sql-wordpress \
+    --db_name=wordpress-database-bdy \
+    --db_user=www-wordpress-website@appspot.gserviceaccount.com \
+    --project_id=www-wordpress-website \
+    --db-region=eu-west3 \
+    --db_password=password
+
+
+
+
+
+
+
+
+
 Method 2 - https://cloud.google.com/sql/docs/mysql/connect-instance-private-ip#create-instance
 
 
