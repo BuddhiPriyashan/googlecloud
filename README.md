@@ -143,3 +143,9 @@ mysql -u root -p --host 10.115.48.3 --port 3306
 
 ![{8A184926-F4CC-4794-B8FE-6AC6A093B4F3}](https://github.com/user-attachments/assets/f0bb1e88-aa58-4277-9c55-212d8ddbb8a6)
 
+student-00-0a3ae24a3983@wordpress-private-ip:/var/www/html$ ls
+index.php        wp-admin              wp-content         wp-load.php      wp-signup.php
+license.txt      wp-blog-header.php    wp-cron.php        wp-login.php     wp-trackback.php
+readme.html      wp-comments-post.php  wp-includes        wp-mail.php      xmlrpc.php
+wp-activate.php  wp-config-sample.php  wp-links-opml.php  wp-settings.php
+
