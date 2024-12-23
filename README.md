@@ -149,3 +149,23 @@ license.txt      wp-blog-header.php    wp-cron.php        wp-login.php     wp-tr
 readme.html      wp-comments-post.php  wp-includes        wp-mail.php      xmlrpc.php
 wp-activate.php  wp-config-sample.php  wp-links-opml.php  wp-settings.php
 
+
+#App Engine Flexible Facts:
+The following extensions have been enabled in the PHP runtimes for App Engine:
+https://cloud.google.com/appengine/docs/standard/php-gen2/runtime#PHP_Enabled_extensions
+
+#Dynamically loadable extensions:
+https://cloud.google.com/appengine/docs/standard/php-gen2/runtime#dynamically_loadable_extensions
+
+To enable these extensions, add directives for them in your php.ini file under extension, for example:
+extension=memcached.so
+extension=grpc.so
+extension=protobuf.so
+extension=mongodb.so
+extension=imagick.so
+extension=opencensus.so
+extension=redis.so
+
+[opentelemetry]
+extension=opentelemetry.so
+
