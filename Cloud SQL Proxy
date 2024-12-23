@@ -1,0 +1,5 @@
+#Download the Cloud SQL Proxy and make it executable
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy && chmod +x cloud_sql_proxy
+
+#Activate the proxy connection to Cloud SQL database and send the process to the background
+./cloud_sql_proxy -instances=$SQL_CONNECTION=tcp:3306 &
