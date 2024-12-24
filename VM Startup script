@@ -19,3 +19,8 @@ rm index.html
 # Allow apache2 to change the wp-config.php file
 chgrp www-data .
 chmod g+w .
+
+
+
+
+/home/buddhi_kandamulla/gam-wordpress/gitclone/wordpress/wordpress
